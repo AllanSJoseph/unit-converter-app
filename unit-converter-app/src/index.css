@@ -1,0 +1,22 @@
+:root{
+    --bgimage: url(https://img.freepik.com/premium-photo/yellow-measuring-tape-screws-isolated-cut-out-dark-background_661495-19088.jpg);
+    /* --bgimage: url(./assets/test.webp); */
+}
+
+*{
+    font-family: 'Courier New', monospace;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    margin: 0 auto;
+    height: 100%;
+    background-image: var(--bgimage);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    background-repeat: no-repeat;
+}
