@@ -1,34 +1,34 @@
 import React from "react";
 import GenerateForm from "./FormGen";
 
-function Time(){
-    const TimeList = ["Seconds","Minutes","Hours","Days","Weeks","Months","Years"];
-    const type = "Time";
+function Data(){
+    const MassList = ["Bit","Byte","KiloByte","MegaByte","GigaByte","TeraByte","PetaByte"];
+    const type = "Data";
 
-    //Default unit = Hours
+    //Default unit = Byte
     const convertToDefault = (value,itype) => {
         let k = 0;
         switch(itype){
-            case "Seconds":
-                k = value / 3600;
+            case "Bit":
+                k = value / 8;
                 break;
-            case "Minutes":
-                k = value / 60;
-                break;
-            case "Hours":
+            case "Byte":
                 k = value;
                 break;
-            case "Days":
-                k = value * 24;
+            case "KiloByte":
+                k = value * 1e+3;
                 break;
-            case "Weeks":
-                k = value * 168;
+            case "MegaByte":
+                k = value * 1e+6;
                 break;
-            case "Months":
-                k = value * 730;
+            case "GigaByte":
+                k = value * 1e+9;
                 break;
-            case "Years":
-                k = value * 8760;
+            case "TeraByte":
+                k = value * 1e+12;
+                break;
+            case "PetaByte":
+                k = value * 1e+15;
                 break;
             default:
                 alert('Sorry! Something went wrong!');
@@ -40,26 +40,26 @@ function Time(){
     const convertToFinal = (value,ftype) => {
         let finalV = 0;
         switch(ftype){
-            case "Seconds":
-                finalV = value * 3600;
+            case "Bit":
+                finalV = value * 8;
                 break;
-            case "Minutes":
-                finalV = value * 60;
-                break;
-            case "Hours":
+            case "Byte":
                 finalV = value;
                 break;
-            case "Days":
-                finalV = value / 24;
+            case "KiloByte":
+                finalV = value / 1e+3;
                 break;
-            case "Weeks":
-                finalV = value / 168;
+            case "MegaByte":
+                finalV = value / 1e+6;
                 break;
-            case "Months":
-                finalV = value / 730;
+            case "GigaByte":
+                finalV = value / 1e+9;
                 break;
-            case "Years":
-                finalV = value / 8760;
+            case "TeraByte":
+                finalV = value / 1e+12;
+                break;
+            case "PetaByte":
+                finalV = value / 1e+15;
                 break;
             default:
                 alert('Sorry! Something went wrong!');
@@ -82,10 +82,10 @@ function Time(){
 
     return(
         <>
-          <GenerateForm items={TimeList} type={type} onSubmit={handleFormSubmission}></GenerateForm>
+          <GenerateForm items={MassList} type={type} onSubmit={handleFormSubmission}></GenerateForm>
         </>
     )
 
 }
 
-export default Time;
+export default Data;

@@ -1,7 +1,7 @@
 import React from "react";
 import GenerateForm from "./FormGen";
 
-function Length(){
+function Mass(){
     const MassList = ["Milligram","Gram","Pound","Kilogram","Tonne"];
     const type = "Mass";
 
@@ -76,4 +76,4 @@ function Length(){
 
 }
 
-export default Length;
+export default Mass;
